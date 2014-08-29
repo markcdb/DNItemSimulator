@@ -11,7 +11,7 @@
 #import "CostumeItemScene.h"
 #import "GeneralItemScene.h"
 
-@interface MainMenuViewController : UIViewController<changeLabel>
+@interface MainMenuViewController : UIViewController
 
 @property (strong,nonatomic)NSString *itemLabelString;
 @property (retain, nonatomic) IBOutlet UILabel *ItemViewLabel;

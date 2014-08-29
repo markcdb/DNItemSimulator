@@ -22,7 +22,8 @@
         
         [self costumeItem:size];
     
-        
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"Costume" object:self];
+
     }
     return self;
     
@@ -34,7 +35,7 @@
     //Helm Config
     self.costumeHelmet= [SKSpriteNode spriteNodeWithImageNamed:@"CostumeHelmet"];
     [self addChild:self.costumeHelmet];
-    CGPoint helmPos = CGPointMake(220, 450);
+    CGPoint helmPos = CGPointMake(215, 450);
     self.costumeHelmet.position = helmPos;
     //Upper Config
     self.costumeUpper = [SKSpriteNode spriteNodeWithImageNamed:@"CostumeUpper"];
@@ -77,21 +78,9 @@
         if(fixedGenTransition.x >=280){
             fixedGenTransition.x = 280;
         }
-        if(fixedGenTransition.x <=220 ){
-            
-            fixedGenTransition.x = 220;
-            
-
-            
-        }
+       
         
-            
-        if(fixedGenTransition.x == 270){
-           
-
-        }
-            
-        if(fixedGenTransition.x >=280){
+        if(fixedGenTransitionAfterHelmet.x >=275){
             fixedGenTransitionAfterHelmet.x = 275;
             
             GeneralItemScene *costumeTransition= [GeneralItemScene sceneWithSize:self.size];
@@ -100,7 +89,7 @@
         if(fixedGenTransitionAfterHelmet.x <=215){
             fixedGenTransitionAfterHelmet.x = 215;
         }
-        self.costumeHelmet.position = fixedGenTransition;
+        self.costumeHelmet.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 450);;
         self.costumeUpper.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 393);
         self.costumeLower.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 338);
         self.costumeGloves.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 283);

@@ -14,13 +14,8 @@
 
 - (void)viewDidLoad
 {
-
-    
-}
-
--(void)viewWillAppear:(BOOL)animated{
     [super viewDidLoad];
-
+    
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = NO;
     skView.showsNodeCount = NO;
@@ -29,31 +24,29 @@
     
     SKScene * scene = [GeneralItemScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    GeneralItemScene *scenePointer = (GeneralItemScene*) scene;
+   
     
-    [scenePointer setDelegate:self];
-    if([scenePointer delegate]){
-        [self costume];
-        [self general];
-    }
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNotification:) name:@"Costume" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNotification:) name:@"General" object:nil];
+ 
     
     
     
     [skView presentScene:scene];
     
-    
 }
--(void)costume{
-    NSString *costume = [[NSString alloc]initWithFormat:@"Costume"];
-    _ItemViewLabel.text = costume;
-    
-    
+
+-(void) receiveNotification:(NSNotification *) notification{
+    if([[notification name]isEqualToString:@"Costume"]){
+        NSString *costume = [[NSString alloc]initWithFormat:@"Costume"];
+        _ItemViewLabel.text = costume;
+    }
+    else{
+        NSString *general = [[NSString alloc]initWithFormat:@"General"];
+        _ItemViewLabel.text = general;
+    }
 }
--(void)general{
-    NSString *general = [[NSString alloc]initWithFormat:@"General"];
-    _ItemViewLabel.text = general;
-    
-}
+
 
 
 - (BOOL)shouldAutorotate

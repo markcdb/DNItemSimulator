@@ -11,18 +11,17 @@
 
 @implementation GeneralItemScene
 @synthesize  generalLabel;
-@synthesize  delegate;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-     
+
         self.backgroundColor = [SKColor whiteColor];
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         
-      
 
         [self generalItem:size];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"General" object:nil];
         
         
 
@@ -34,7 +33,7 @@
     //Helm Config
     self.GenHelm= [SKSpriteNode spriteNodeWithImageNamed:@"GenHelm"];
     [self addChild:self.GenHelm];
-    CGPoint helmPos = CGPointMake(280, 450);
+    CGPoint helmPos = CGPointMake(275, 450);
     self.GenHelm.position = helmPos;
     //Upper Config
     self.GenUpper = [SKSpriteNode spriteNodeWithImageNamed:@"GenUpper"];
@@ -72,36 +71,31 @@
         CGPoint performTransition = [touch locationInNode:self];
         CGPoint fixedTransitioned = CGPointMake(performTransition.x, 450);
         CGPoint afterHelmetTransition = CGPointMake(performTransition.x, 450);
-        if(fixedTransitioned.x >= 280){
-            fixedTransitioned.x = 280;
+        if(fixedTransitioned.x >= 275){
+            fixedTransitioned.x = 275;
         
                 }
-        if(fixedTransitioned.x <=220){
+        if(fixedTransitioned.x <=215){
             afterHelmetTransition.x = 215;
 
-            NSLog(@"%f",fixedTransitioned.x);
         }
         if(afterHelmetTransition.x >=275){
             afterHelmetTransition.x = 275;
             NSLog(@"%f",fixedTransitioned.x);
-            if([delegate respondsToSelector:@selector(general)]){
-                [delegate performSelector:@selector(general)];
-            }
+            
         }
 
-        self.GenHelm.position = fixedTransitioned;
+        self.GenHelm.position = CGPointMake(afterHelmetTransition.x, 450);
         self.GenUpper.position = CGPointMake(afterHelmetTransition.x, 393);
         self.GenLower.position = CGPointMake(afterHelmetTransition.x, 338);
         self.GenGloves.position = CGPointMake(afterHelmetTransition.x, 283);
         self.GenShoes.position = CGPointMake(afterHelmetTransition.x, 228);
         self.GenMainWeap.position = CGPointMake(afterHelmetTransition.x, 173);
         self.GenSecondaryWeap.position = CGPointMake(afterHelmetTransition.x, 118);
-        if(fixedTransitioned.x <=220){
+        if(fixedTransitioned.x <=215){
                 CostumeItemScene *costumeTransition= [CostumeItemScene sceneWithSize:self.size];
             [self.view presentScene:costumeTransition transition:[SKTransition crossFadeWithDuration:0.5]];
-            if([delegate respondsToSelector:@selector(costume)]){
-                [delegate performSelector:@selector(costume)];
-            }
+            
             }
         }
     }
