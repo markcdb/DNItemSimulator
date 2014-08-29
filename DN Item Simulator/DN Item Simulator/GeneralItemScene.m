@@ -11,6 +11,7 @@
 
 @implementation GeneralItemScene
 @synthesize  generalLabel;
+@synthesize  delegate;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -79,16 +80,13 @@
             afterHelmetTransition.x = 215;
 
             NSLog(@"%f",fixedTransitioned.x);
-
         }
-        
-
-        
         if(afterHelmetTransition.x >=275){
             afterHelmetTransition.x = 275;
             NSLog(@"%f",fixedTransitioned.x);
-            
-
+            if([delegate respondsToSelector:@selector(general)]){
+                [delegate performSelector:@selector(general)];
+            }
         }
 
         self.GenHelm.position = fixedTransitioned;
@@ -101,8 +99,9 @@
         if(fixedTransitioned.x <=220){
                 CostumeItemScene *costumeTransition= [CostumeItemScene sceneWithSize:self.size];
             [self.view presentScene:costumeTransition transition:[SKTransition crossFadeWithDuration:0.5]];
-            
-
+            if([delegate respondsToSelector:@selector(costume)]){
+                [delegate performSelector:@selector(costume)];
+            }
             }
         }
     }

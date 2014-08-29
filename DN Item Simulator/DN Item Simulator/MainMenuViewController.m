@@ -14,23 +14,44 @@
 
 - (void)viewDidLoad
 {
+
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
     [super viewDidLoad];
 
-    // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = NO;
     skView.showsNodeCount = NO;
     
     // Create and configure the scene.
-
+    
     SKScene * scene = [GeneralItemScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
+    GeneralItemScene *scenePointer = (GeneralItemScene*) scene;
+    
+    [scenePointer setDelegate:self];
+    if([scenePointer delegate]){
+        [self costume];
+        [self general];
+    }
     
     
     
-    
-        // Present the scene.
     [skView presentScene:scene];
+    
+    
+}
+-(void)costume{
+    NSString *costume = [[NSString alloc]initWithFormat:@"Costume"];
+    _ItemViewLabel.text = costume;
+    
+    
+}
+-(void)general{
+    NSString *general = [[NSString alloc]initWithFormat:@"General"];
+    _ItemViewLabel.text = general;
     
 }
 
