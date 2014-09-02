@@ -18,6 +18,9 @@
 @property (nonatomic) SKSpriteNode *GenMainWeap;
 @property (nonatomic) SKSpriteNode *GenSecondaryWeap;
 @property (nonatomic,retain) NSString *generalLabel;
-
+@property (nonatomic) SKSpriteNode *GenNecklace;
+@property (nonatomic) SKSpriteNode *GenRing;
+@property (nonatomic) SKSpriteNode *GenEarring;
+@property (nonatomic) SKSpriteNode *GenRing2;
 
 @end

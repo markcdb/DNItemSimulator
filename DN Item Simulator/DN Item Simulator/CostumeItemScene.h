@@ -18,7 +18,10 @@
 @property (nonatomic) SKSpriteNode *costumeShoes;
 @property (nonatomic) SKSpriteNode *costumeMainWeap;
 @property (nonatomic) SKSpriteNode *costumeSecondaryWeapon;
-
+@property (nonatomic) SKSpriteNode *cosRing;
+@property (nonatomic) SKSpriteNode *cosRings2;
+@property (nonatomic) SKSpriteNode *cosEarrings;
+@property (nonatomic) SKSpriteNode *cosNecklace;
 
 
 

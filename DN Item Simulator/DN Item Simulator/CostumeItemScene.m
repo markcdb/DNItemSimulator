@@ -19,7 +19,12 @@
         self.backgroundColor = [SKColor whiteColor];
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.physicsWorld.gravity = CGVectorMake(0, 0);
+        SKSpriteNode *bg1 = [SKSpriteNode spriteNodeWithImageNamed:@"bg1Final"];
+        bg1.size = self.frame.size;
         
+        [self addChild:bg1];
+        CGPoint bgPos = CGPointMake(self.size.width/2, self.size.height/2);
+        bg1.position = bgPos;
         [self costumeItem:size];
     
         [[NSNotificationCenter defaultCenter]postNotificationName:@"Costume" object:self];
@@ -35,38 +40,58 @@
     //Helm Config
     self.costumeHelmet= [SKSpriteNode spriteNodeWithImageNamed:@"CostumeHelmet"];
     [self addChild:self.costumeHelmet];
-    CGPoint helmPos = CGPointMake(215, 450);
+    CGPoint helmPos = CGPointMake(220, 505);
     self.costumeHelmet.position = helmPos;
     //Upper Config
     self.costumeUpper = [SKSpriteNode spriteNodeWithImageNamed:@"CostumeUpper"];
     [self addChild:self.costumeUpper];
-    CGPoint upperPos = CGPointMake(215, 393);
+    CGPoint upperPos = CGPointMake(220, 448);
     self.costumeUpper.position = upperPos;
     //Lower Config
     self.costumeLower= [SKSpriteNode spriteNodeWithImageNamed:@"CostumeLower"];
     [self addChild:self.costumeLower];
-    CGPoint lowerPos = CGPointMake(215, 338);
+    CGPoint lowerPos = CGPointMake(220, 393);
     self.costumeLower.position = lowerPos;
     //Gloves Config
     self.costumeGloves = [SKSpriteNode spriteNodeWithImageNamed:@"CostumeGloves"];
     [self addChild:self.costumeGloves];
-    CGPoint glovePos = CGPointMake(215, 283);
+    CGPoint glovePos = CGPointMake(220, 338);
     self.costumeGloves.position = glovePos;
     //Shoes config
     self.costumeShoes= [SKSpriteNode spriteNodeWithImageNamed:@"CostumeShoes"];
     [self addChild:self.costumeShoes];
-    CGPoint shoesPos = CGPointMake(215, 228);
+    CGPoint shoesPos = CGPointMake(220, 283);
     self.costumeShoes.position = shoesPos;
     //Main Weapon Config
     self.costumeMainWeap= [SKSpriteNode spriteNodeWithImageNamed:@"CostumeMainWeap"];
     [self addChild:self.costumeMainWeap];
-    CGPoint mainWeapPos = CGPointMake(215, 173);
+    CGPoint mainWeapPos = CGPointMake(220, 228);
     self.costumeMainWeap.position = mainWeapPos;
     //Secondary Weapon Config
     self.costumeSecondaryWeapon = [SKSpriteNode spriteNodeWithImageNamed:@"CostumeSecondaryWeap"];
     [self addChild:self.costumeSecondaryWeapon];
-    CGPoint secondaryWeapPos = CGPointMake(215, 118);
+    CGPoint secondaryWeapPos = CGPointMake(220, 173);
     self.costumeSecondaryWeapon.position = secondaryWeapPos;
+    //Ring1
+    self.cosRing = [SKSpriteNode spriteNodeWithImageNamed:@"CosRings"];
+    [self addChild:self.cosRing];
+    CGPoint ringPos = CGPointMake(213, 118);
+    self.cosRing.position = ringPos;
+    //RIng2
+    self.cosRings2 = [SKSpriteNode spriteNodeWithImageNamed:@"CosRings"];
+    [self addChild:self.cosRings2];
+    CGPoint ring2Pos = CGPointMake(153, 118);
+    self.cosRings2.position = ring2Pos;
+    //Earring
+    self.cosEarrings = [SKSpriteNode spriteNodeWithImageNamed:@"CosEarrings"];
+    [self addChild:self.cosEarrings];
+    CGPoint earringPos = CGPointMake(93, 118);
+    self.cosEarrings.position = earringPos;
+    //Necklace
+    self.cosNecklace = [SKSpriteNode spriteNodeWithImageNamed:@"CosNecklace"];
+    [self addChild:self.cosNecklace];
+    CGPoint necklacePos = CGPointMake(33, 118);
+    self.cosNecklace.position = necklacePos;
 
     
 }
@@ -86,17 +111,17 @@
             GeneralItemScene *costumeTransition= [GeneralItemScene sceneWithSize:self.size];
             [self.view presentScene:costumeTransition transition:[SKTransition crossFadeWithDuration:0.5]];
             }
-        if(fixedGenTransitionAfterHelmet.x <=215){
-            fixedGenTransitionAfterHelmet.x = 215;
+        if(fixedGenTransitionAfterHelmet.x <=220){
+            fixedGenTransitionAfterHelmet.x = 220;
         }
-        self.costumeHelmet.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 450);;
-        self.costumeUpper.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 393);
-        self.costumeLower.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 338);
-        self.costumeGloves.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 283);
-        self.costumeShoes.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 228);
-        self.costumeMainWeap.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 173);
-        self.costumeSecondaryWeapon.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 118);
-        
+        self.costumeHelmet.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 505);;
+        self.costumeUpper.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 448);
+        self.costumeLower.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 393);
+        self.costumeGloves.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 338);
+        self.costumeShoes.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 283);
+        self.costumeMainWeap.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 228);
+        self.costumeSecondaryWeapon.position = CGPointMake(fixedGenTransitionAfterHelmet.x, 173);
+    
     }
 }
 @end

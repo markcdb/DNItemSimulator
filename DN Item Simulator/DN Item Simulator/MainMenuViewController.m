@@ -26,8 +26,16 @@
     scene.scaleMode = SKSceneScaleModeAspectFill;
    
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNotification:) name:@"Costume" object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receiveNotification:) name:@"General" object:nil];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(receiveNotification:)
+     name:@"Costume" object:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(receiveNotification:)
+     name:@"General" object:nil];
  
     
     

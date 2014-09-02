@@ -65,6 +65,13 @@
 		8E138CD91990ABA500519982 /* +10.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD31990ABA500519982 /* +10.sks */; };
 		8E138CDA1990ABA500519982 /* +8.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD41990ABA500519982 /* +8.sks */; };
 		8E138CDB1990ABA500519982 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD51990ABA500519982 /* spark.png */; };
+		8E8669EB19B38C5F000FD976 /* CosEarrings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669E819B38C5F000FD976 /* CosEarrings.png */; };
+		8E8669EC19B38C5F000FD976 /* CosNecklace.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669E919B38C5F000FD976 /* CosNecklace.png */; };
+		8E8669ED19B38C5F000FD976 /* CosRings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669EA19B38C5F000FD976 /* CosRings.png */; };
+		8E8669F119B38C78000FD976 /* GenEarrings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669EE19B38C78000FD976 /* GenEarrings.png */; };
+		8E8669F219B38C78000FD976 /* GenNecklace.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669EF19B38C78000FD976 /* GenNecklace.png */; };
+		8E8669F319B38C78000FD976 /* GenRing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669F019B38C78000FD976 /* GenRing.png */; };
+		8E866A0719B45481000FD976 /* bg1Final.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E866A0619B45481000FD976 /* bg1Final.png */; };
 		8EC0B30019949C600071563C /* GenGloves.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC0B2FA19949C600071563C /* GenGloves.png */; };
 		8EC0B30119949C600071563C /* GenHelm.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC0B2FB19949C600071563C /* GenHelm.png */; };
 		8EC0B30219949C600071563C /* GenMainWeap.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC0B2FC19949C600071563C /* GenMainWeap.png */; };
@@ -162,6 +169,13 @@
 		8E138CD31990ABA500519982 /* +10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "+10.sks"; sourceTree = "<group>"; };
 		8E138CD41990ABA500519982 /* +8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "+8.sks"; sourceTree = "<group>"; };
 		8E138CD51990ABA500519982 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		8E8669E819B38C5F000FD976 /* CosEarrings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosEarrings.png; sourceTree = "<group>"; };
+		8E8669E919B38C5F000FD976 /* CosNecklace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosNecklace.png; sourceTree = "<group>"; };
+		8E8669EA19B38C5F000FD976 /* CosRings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosRings.png; sourceTree = "<group>"; };
+		8E8669EE19B38C78000FD976 /* GenEarrings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenEarrings.png; sourceTree = "<group>"; };
+		8E8669EF19B38C78000FD976 /* GenNecklace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenNecklace.png; sourceTree = "<group>"; };
+		8E8669F019B38C78000FD976 /* GenRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenRing.png; sourceTree = "<group>"; };
+		8E866A0619B45481000FD976 /* bg1Final.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1Final.png; sourceTree = "<group>"; };
 		8EC0B2FA19949C600071563C /* GenGloves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenGloves.png; sourceTree = "<group>"; };
 		8EC0B2FB19949C600071563C /* GenHelm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenHelm.png; sourceTree = "<group>"; };
 		8EC0B2FC19949C600071563C /* GenMainWeap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GenMainWeap.png; sourceTree = "<group>"; };
@@ -245,6 +259,7 @@
 		8E138C1C1990907900519982 /* DN Item Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				8E866A0619B45481000FD976 /* bg1Final.png */,
 				8E138C251990907900519982 /* AppDelegate.h */,
 				8E138C261990907900519982 /* AppDelegate.m */,
 				8E138C281990907900519982 /* Main.storyboard */,
@@ -356,6 +371,9 @@
 				8EC0B2FA19949C600071563C /* GenGloves.png */,
 				8EC0B2FB19949C600071563C /* GenHelm.png */,
 				8EC0B2FC19949C600071563C /* GenMainWeap.png */,
+				8E8669EE19B38C78000FD976 /* GenEarrings.png */,
+				8E8669EF19B38C78000FD976 /* GenNecklace.png */,
+				8E8669F019B38C78000FD976 /* GenRing.png */,
 				8EC0B2FD19949C600071563C /* GenSecondaryWeap.png */,
 				8EC0B2FE19949C600071563C /* GenShoes.png */,
 				8EC0B3061994A6650071563C /* GenLower.png */,
@@ -371,6 +389,9 @@
 				8EC0B3091994BD1B0071563C /* CostumeHelmet.png */,
 				8EC0B30A1994BD1B0071563C /* CostumeLower.png */,
 				8EC0B3151994D37F0071563C /* CostumeShoes.png */,
+				8E8669E819B38C5F000FD976 /* CosEarrings.png */,
+				8E8669E919B38C5F000FD976 /* CosNecklace.png */,
+				8E8669EA19B38C5F000FD976 /* CosRings.png */,
 				8EC0B30B1994BD1B0071563C /* CostumeMainWeap.png */,
 				8EC0B30C1994BD1B0071563C /* CostumeSecondaryWeap.png */,
 				8EC0B30D1994BD1B0071563C /* CostumeUpper.png */,
@@ -458,8 +479,12 @@
 				8E138C8619909EA400519982 /* Shooting Star.png in Resources */,
 				8E138C7219909EA400519982 /* Adept.png in Resources */,
 				8E138C211990907900519982 /* InfoPlist.strings in Resources */,
+				8E8669F319B38C78000FD976 /* GenRing.png in Resources */,
 				8EC0B30E1994BD1B0071563C /* CostumeGloves.png in Resources */,
+				8E8669EC19B38C5F000FD976 /* CosNecklace.png in Resources */,
+				8E866A0719B45481000FD976 /* bg1Final.png in Resources */,
 				8E138C8419909EA400519982 /* Saint.png in Resources */,
+				8E8669ED19B38C5F000FD976 /* CosRings.png in Resources */,
 				8E138C7419909EA400519982 /* Barbarian.png in Resources */,
 				8E138CD91990ABA500519982 /* +10.sks in Resources */,
 				8E138C8819909EA400519982 /* Sniper.png in Resources */,
@@ -480,6 +505,7 @@
 				8EC0B30419949C600071563C /* GenShoes.png in Resources */,
 				8E138C7B19909EA400519982 /* Gladiator.png in Resources */,
 				8EC0B3161994D37F0071563C /* CostumeShoes.png in Resources */,
+				8E8669EB19B38C5F000FD976 /* CosEarrings.png in Resources */,
 				8E138C8319909EA400519982 /* Ripper.png in Resources */,
 				8E138C8719909EA400519982 /* Smasher.png in Resources */,
 				8E138C8019909EA400519982 /* Moonlord.png in Resources */,
@@ -487,9 +513,11 @@
 				8EC0B3121994BD1B0071563C /* CostumeSecondaryWeap.png in Resources */,
 				8EC0B30519949C600071563C /* GenUpper.png in Resources */,
 				8E138CDB1990ABA500519982 /* spark.png in Resources */,
+				8E8669F219B38C78000FD976 /* GenNecklace.png in Resources */,
 				8E138C8119909EA400519982 /* Physician.png in Resources */,
 				8E138C7C19909EA400519982 /* Guardian.png in Resources */,
 				8E138C7A19909EA400519982 /* Gear Master.png in Resources */,
+				8E8669F119B38C78000FD976 /* GenEarrings.png in Resources */,
 				8E138C8C19909EA400519982 /* Windwalker.png in Resources */,
 				8E138C8519909EA400519982 /* Seleana.png in Resources */,
 				8EC0B30019949C600071563C /* GenGloves.png in Resources */,
