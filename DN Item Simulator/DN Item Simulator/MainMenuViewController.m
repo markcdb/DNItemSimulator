@@ -7,6 +7,7 @@
 //
 
 #import "MainMenuViewController.h"
+#import "ItemListTableViewController.h"
 
 @implementation MainMenuViewController
 @synthesize itemLabelString;
@@ -37,6 +38,10 @@
      selector:@selector(receiveNotification:)
      name:@"General" object:nil];
  
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(itemListReceiver:)
+     name:@"ItemListTable" object:nil];
     
     
     
@@ -44,12 +49,17 @@
     
 }
 
+-(void) itemListReceiver:(NSNotificationCenter *) notification{
+    
+    [self performSegueWithIdentifier:@"toItemList" sender:self];
+    
+}
 -(void) receiveNotification:(NSNotification *) notification{
     if([[notification name]isEqualToString:@"Costume"]){
         NSString *costume = [[NSString alloc]initWithFormat:@"Costume"];
         _ItemViewLabel.text = costume;
     }
-    else{
+    else if([[notification name]isEqualToString:@"General"]){
         NSString *general = [[NSString alloc]initWithFormat:@"General"];
         _ItemViewLabel.text = general;
     }
@@ -82,4 +92,13 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (IBAction)switchEquipView:(id)sender {
+    if(_itemViewSwitcher.on){
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"switchCostume" object:nil];
+    }
+    else{
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"switchGeneral" object:nil];
+
+    }
+}
 @end

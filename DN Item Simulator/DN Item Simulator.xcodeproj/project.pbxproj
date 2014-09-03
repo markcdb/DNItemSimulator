@@ -65,6 +65,8 @@
 		8E138CD91990ABA500519982 /* +10.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD31990ABA500519982 /* +10.sks */; };
 		8E138CDA1990ABA500519982 /* +8.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD41990ABA500519982 /* +8.sks */; };
 		8E138CDB1990ABA500519982 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD51990ABA500519982 /* spark.png */; };
+		8E72867419B69E8800745D5C /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E72867319B69E8800745D5C /* bg2.png */; };
+		8E72867719B69F8500745D5C /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E72867619B69F8500745D5C /* ItemListTableViewController.m */; };
 		8E8669EB19B38C5F000FD976 /* CosEarrings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669E819B38C5F000FD976 /* CosEarrings.png */; };
 		8E8669EC19B38C5F000FD976 /* CosNecklace.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669E919B38C5F000FD976 /* CosNecklace.png */; };
 		8E8669ED19B38C5F000FD976 /* CosRings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669EA19B38C5F000FD976 /* CosRings.png */; };
@@ -169,6 +171,9 @@
 		8E138CD31990ABA500519982 /* +10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "+10.sks"; sourceTree = "<group>"; };
 		8E138CD41990ABA500519982 /* +8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "+8.sks"; sourceTree = "<group>"; };
 		8E138CD51990ABA500519982 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		8E72867319B69E8800745D5C /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		8E72867519B69F8500745D5C /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
+		8E72867619B69F8500745D5C /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
 		8E8669E819B38C5F000FD976 /* CosEarrings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosEarrings.png; sourceTree = "<group>"; };
 		8E8669E919B38C5F000FD976 /* CosNecklace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosNecklace.png; sourceTree = "<group>"; };
 		8E8669EA19B38C5F000FD976 /* CosRings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosRings.png; sourceTree = "<group>"; };
@@ -227,6 +232,7 @@
 				8E4C148C199363DD0030539D /* General Equipment */,
 				8E138CDC1990ABAB00519982 /* Particle Configuration */,
 				8E138C8D19909EB200519982 /* Job Classess */,
+				8E72867819B69F8B00745D5C /* TableView */,
 				8E138C1C1990907900519982 /* DN Item Simulator */,
 				8E138C401990907A00519982 /* DN Item SimulatorTests */,
 				8E138C131990907900519982 /* Frameworks */,
@@ -259,6 +265,7 @@
 		8E138C1C1990907900519982 /* DN Item Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				8E72867319B69E8800745D5C /* bg2.png */,
 				8E866A0619B45481000FD976 /* bg1Final.png */,
 				8E138C251990907900519982 /* AppDelegate.h */,
 				8E138C261990907900519982 /* AppDelegate.m */,
@@ -380,6 +387,16 @@
 				8EC0B2FF19949C600071563C /* GenUpper.png */,
 			);
 			name = "General Equipment";
+			sourceTree = "<group>";
+		};
+		8E72867819B69F8B00745D5C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8E72867519B69F8500745D5C /* ItemListTableViewController.h */,
+				8E72867619B69F8500745D5C /* ItemListTableViewController.m */,
+			);
+			name = TableView;
+			path = "DN Item Simulator";
 			sourceTree = "<group>";
 		};
 		8EC0B3141994BDBC0071563C /* Costume Equipment */ = {
@@ -508,6 +525,7 @@
 				8E8669EB19B38C5F000FD976 /* CosEarrings.png in Resources */,
 				8E138C8319909EA400519982 /* Ripper.png in Resources */,
 				8E138C8719909EA400519982 /* Smasher.png in Resources */,
+				8E72867419B69E8800745D5C /* bg2.png in Resources */,
 				8E138C8019909EA400519982 /* Moonlord.png in Resources */,
 				8E138CD81990ABA500519982 /* +12.sks in Resources */,
 				8EC0B3121994BD1B0071563C /* CostumeSecondaryWeap.png in Resources */,
@@ -558,6 +576,7 @@
 				8E138CC91990AA2500519982 /* EnhanceBonusWeapon.m in Sources */,
 				8E138C301990907900519982 /* GeneralItemScene.m in Sources */,
 				8E138C2D1990907900519982 /* MainMenuViewController.m in Sources */,
+				8E72867719B69F8500745D5C /* ItemListTableViewController.m in Sources */,
 				8E138C271990907900519982 /* AppDelegate.m in Sources */,
 				8E138CCF1990AA2500519982 /* ItemAttributeArmor.m in Sources */,
 				8E138C231990907900519982 /* main.m in Sources */,

@@ -22,7 +22,7 @@
         self.physicsWorld.gravity = CGVectorMake(0, 0);
         //configuring the background
         
-        SKSpriteNode *bg1 = [SKSpriteNode spriteNodeWithImageNamed:@"bg1Final"];
+        SKSpriteNode *bg1 = [SKSpriteNode spriteNodeWithImageNamed:@"bg2"];
         bg1.size = self.frame.size;
         [self addChild:bg1];
         CGPoint bgPos = CGPointMake(self.size.width/2, self.size.height/2);
@@ -31,14 +31,25 @@
         //setting up the scene
 
         [self generalItem:size];
-        [[NSNotificationCenter defaultCenter]
-         postNotificationName:@"General"
-         object:nil];
-        
-        
 
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"General"
+                                                           object:nil];
+        
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(switchView:)
+                                                    name:@"switchCostume"
+                                                  object:nil];
     }
     return self;
+}
+
+-(void)switchView:(NSNotification*)notification{
+    if([[notification name]isEqualToString:@"switchCostume"]){
+    CostumeItemScene *costumeTransition= [CostumeItemScene sceneWithSize:self.size];
+    [self.view presentScene:costumeTransition transition:[SKTransition crossFadeWithDuration:0.5]];
+    }
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+
 }
 
 -(void)generalItem:(CGSize)size{
@@ -101,40 +112,49 @@
     
     
 }
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    for(UITouch *touch in touches) {
-        CGPoint performTransition = [touch locationInNode:self];
-        CGPoint fixedTransitioned = CGPointMake(performTransition.x, 450);
-        CGPoint afterHelmetTransition = CGPointMake(performTransition.x, 450);
 
-        if(fixedTransitioned.x >= 275){
-            fixedTransitioned.x = 275;
-        
-                }
-        if(fixedTransitioned.x <=220){
-            afterHelmetTransition.x = 220;
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touchesNode = [touches anyObject];
+    CGPoint location = [touchesNode locationInNode:self];
+    NSArray *nodes = [self nodesAtPoint:location];
+    for(SKSpriteNode *node in nodes){
+        if([node isEqual:self.GenHelm]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenUpper]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
 
         }
-        if(afterHelmetTransition.x >=275){
-            afterHelmetTransition.x = 275;
-            NSLog(@"%f",fixedTransitioned.x);
-            
+        if([node isEqual:self.GenLower]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
         }
-        self.GenHelm.position = CGPointMake(afterHelmetTransition.x, 505);
-        self.GenUpper.position = CGPointMake(afterHelmetTransition.x, 448);
-        self.GenLower.position = CGPointMake(afterHelmetTransition.x, 393);
-        self.GenGloves.position = CGPointMake(afterHelmetTransition.x, 338);
-        self.GenShoes.position = CGPointMake(afterHelmetTransition.x, 283);
-        self.GenMainWeap.position = CGPointMake(afterHelmetTransition.x, 228);
-        self.GenSecondaryWeap.position = CGPointMake(afterHelmetTransition.x, 173);
-        if(fixedTransitioned.x <=220){
-                CostumeItemScene *costumeTransition= [CostumeItemScene sceneWithSize:self.size];
-            [self.view presentScene:costumeTransition transition:[SKTransition crossFadeWithDuration:0.5]];
-            
-            }
+        if([node isEqual:self.GenGloves]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenShoes]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenMainWeap]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenSecondaryWeap]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenRing]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenRing2]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenNecklace]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
+        }
+        if([node isEqual:self.GenEarring]){
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"ItemListTable" object:nil];
         }
     }
-
+}
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
 }

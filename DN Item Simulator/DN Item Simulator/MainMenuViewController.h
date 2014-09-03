@@ -12,9 +12,10 @@
 #import "GeneralItemScene.h"
 
 @interface MainMenuViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISwitch *itemViewSwitcher;
 
+- (IBAction)switchEquipView:(id)sender;
 @property (strong,nonatomic)NSString *itemLabelString;
 @property (retain, nonatomic) IBOutlet UILabel *ItemViewLabel;
-
 
 @end
