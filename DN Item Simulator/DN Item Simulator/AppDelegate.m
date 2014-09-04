@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Parser.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString *path = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:@"uistring.xml"];
+    NSData *data = [[NSData alloc]initWithContentsOfFile:path];
+    
+    NSXMLParser *xmlParser = [[NSXMLParser alloc]initWithData:data];
+    
+    Parser *theParser =[[Parser alloc]initParser];
+    
+    [xmlParser setDelegate:theParser];
+    
+    BOOL worked;
+    if(worked){
+        NSLog(@"Parse successful!");
+    }
+    else{
+        NSError *error = nil;
+        NSLog(@"%@",error);
+        
+        
+    }
+    
+    
+    
     // Override point for customization after application launch.
     return YES;
 }

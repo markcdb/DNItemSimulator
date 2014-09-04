@@ -65,8 +65,11 @@
 		8E138CD91990ABA500519982 /* +10.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD31990ABA500519982 /* +10.sks */; };
 		8E138CDA1990ABA500519982 /* +8.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD41990ABA500519982 /* +8.sks */; };
 		8E138CDB1990ABA500519982 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD51990ABA500519982 /* spark.png */; };
+		8E15123819B81F8200F61130 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E15123719B81F8200F61130 /* List.m */; };
+		8E15123B19B82D7C00F61130 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E15123A19B82D7C00F61130 /* Parser.m */; };
 		8E72867419B69E8800745D5C /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E72867319B69E8800745D5C /* bg2.png */; };
 		8E72867719B69F8500745D5C /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E72867619B69F8500745D5C /* ItemListTableViewController.m */; };
+		8E72867A19B709B100745D5C /* uistring.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8E72867919B709B100745D5C /* uistring.xml */; };
 		8E8669EB19B38C5F000FD976 /* CosEarrings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669E819B38C5F000FD976 /* CosEarrings.png */; };
 		8E8669EC19B38C5F000FD976 /* CosNecklace.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669E919B38C5F000FD976 /* CosNecklace.png */; };
 		8E8669ED19B38C5F000FD976 /* CosRings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E8669EA19B38C5F000FD976 /* CosRings.png */; };
@@ -171,9 +174,14 @@
 		8E138CD31990ABA500519982 /* +10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "+10.sks"; sourceTree = "<group>"; };
 		8E138CD41990ABA500519982 /* +8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "+8.sks"; sourceTree = "<group>"; };
 		8E138CD51990ABA500519982 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		8E15123619B81F8200F61130 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		8E15123719B81F8200F61130 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		8E15123919B82D7C00F61130 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		8E15123A19B82D7C00F61130 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		8E72867319B69E8800745D5C /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		8E72867519B69F8500745D5C /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
 		8E72867619B69F8500745D5C /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
+		8E72867919B709B100745D5C /* uistring.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = uistring.xml; sourceTree = "<group>"; };
 		8E8669E819B38C5F000FD976 /* CosEarrings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosEarrings.png; sourceTree = "<group>"; };
 		8E8669E919B38C5F000FD976 /* CosNecklace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosNecklace.png; sourceTree = "<group>"; };
 		8E8669EA19B38C5F000FD976 /* CosRings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CosRings.png; sourceTree = "<group>"; };
@@ -228,6 +236,7 @@
 		8E138C081990907900519982 = {
 			isa = PBXGroup;
 			children = (
+				8E72867B19B709D100745D5C /* Database and xml */,
 				8EC0B3141994BDBC0071563C /* Costume Equipment */,
 				8E4C148C199363DD0030539D /* General Equipment */,
 				8E138CDC1990ABAB00519982 /* Particle Configuration */,
@@ -399,6 +408,18 @@
 			path = "DN Item Simulator";
 			sourceTree = "<group>";
 		};
+		8E72867B19B709D100745D5C /* Database and xml */ = {
+			isa = PBXGroup;
+			children = (
+				8E72867919B709B100745D5C /* uistring.xml */,
+				8E15123619B81F8200F61130 /* List.h */,
+				8E15123719B81F8200F61130 /* List.m */,
+				8E15123919B82D7C00F61130 /* Parser.h */,
+				8E15123A19B82D7C00F61130 /* Parser.m */,
+			);
+			name = "Database and xml";
+			sourceTree = "<group>";
+		};
 		8EC0B3141994BDBC0071563C /* Costume Equipment */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +557,7 @@
 				8E138C7C19909EA400519982 /* Guardian.png in Resources */,
 				8E138C7A19909EA400519982 /* Gear Master.png in Resources */,
 				8E8669F119B38C78000FD976 /* GenEarrings.png in Resources */,
+				8E72867A19B709B100745D5C /* uistring.xml in Resources */,
 				8E138C8C19909EA400519982 /* Windwalker.png in Resources */,
 				8E138C8519909EA400519982 /* Seleana.png in Resources */,
 				8EC0B30019949C600071563C /* GenGloves.png in Resources */,
@@ -570,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E15123819B81F8200F61130 /* List.m in Sources */,
 				8E138CC01990AA0200519982 /* EnhanceAppCD.xcdatamodel in Sources */,
 				8E138CC31990AA2400519982 /* ItemAttributeWeapon.m in Sources */,
 				8E138CCC1990AA2500519982 /* User.m in Sources */,
@@ -581,6 +604,7 @@
 				8E138CCF1990AA2500519982 /* ItemAttributeArmor.m in Sources */,
 				8E138C231990907900519982 /* main.m in Sources */,
 				8EC0B3191994DCB70071563C /* CostumeItemScene.m in Sources */,
+				8E15123B19B82D7C00F61130 /* Parser.m in Sources */,
 				8E138CC61990AA2500519982 /* EnhanceBonusArmor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

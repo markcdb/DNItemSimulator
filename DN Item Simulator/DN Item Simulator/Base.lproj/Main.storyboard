@@ -183,14 +183,14 @@
                     <connections>
                         <outlet property="ItemViewLabel" destination="Iqe-dZ-QeN" id="dPW-To-VEz"/>
                         <outlet property="itemViewSwitcher" destination="qOc-cr-JR3" id="fql-bn-u9v"/>
-                        <segue destination="ggN-bA-Slh" kind="modal" identifier="toItemList" id="F6d-e7-R80"/>
+                        <segue destination="ggN-bA-Slh" kind="modal" identifier="toItemList" id="eOo-5j-gQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="38"/>
+            <point key="canvasLocation" x="2025" y="38"/>
         </scene>
-        <!--Item List Table View Controller-->
+        <!--Item List Table View Controller - Title-->
         <scene sceneID="eF4-g7-8wn">
             <objects>
                 <tableViewController id="ggN-bA-Slh" customClass="ItemListTableViewController" sceneMemberID="viewController">
@@ -213,11 +213,13 @@
                             <outlet property="delegate" destination="ggN-bA-Slh" id="4je-6W-0eO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="rwf-GO-LqR"/>
+                    <navigationItem key="navigationItem" title="Title" id="hv7-jl-Xh0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6eX-P8-Vnl"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HF-pA-Ms2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="38"/>
+            <point key="canvasLocation" x="2586" y="38"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="TNI-aj-djC">
@@ -245,7 +247,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ib-ub-YGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3827" y="-260"/>
+            <point key="canvasLocation" x="4353" y="-260"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="B9e-bZ-Xhs">
@@ -273,7 +275,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clr-r6-Ve7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3827" y="453"/>
+            <point key="canvasLocation" x="4353" y="453"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
