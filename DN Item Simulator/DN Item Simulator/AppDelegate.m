@@ -11,6 +11,7 @@
 
 @implementation AppDelegate
 
+@synthesize listArray;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
@@ -26,15 +27,12 @@
     
     [xmlParser setDelegate:theParser];
     
-    BOOL worked;
+    BOOL worked = [xmlParser parse];
     if(worked){
-        NSLog(@"Parse successful!");
+        NSLog(@"Parse successful! Data count is %i",[listArray count]);
     }
     else{
-        NSError *error = nil;
-        NSLog(@"%@",error);
-        
-        
+        NSLog(@"Error data not loaded");
     }
     
     
