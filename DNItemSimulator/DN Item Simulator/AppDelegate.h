@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Itemtableequipment.h"
+#import "MainMenuViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

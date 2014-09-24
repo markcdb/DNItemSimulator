@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="LVB-YS-i5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="LVB-YS-i5n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Main Menu View Controller - Item-->
+        <!--Main Menu View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
                 <viewController id="LVB-YS-i5n" customClass="MainMenuViewController" sceneMemberID="viewController">
@@ -178,19 +178,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="iKm-Xl-KEO"/>
                     <navigationItem key="navigationItem" id="LAL-0p-E3c"/>
                     <connections>
                         <outlet property="ItemViewLabel" destination="Iqe-dZ-QeN" id="dPW-To-VEz"/>
                         <outlet property="itemViewSwitcher" destination="qOc-cr-JR3" id="fql-bn-u9v"/>
                         <segue destination="ggN-bA-Slh" kind="modal" identifier="toItemList" id="eOo-5j-gQm"/>
+                        <segue destination="bdf-eW-F8B" kind="modal" identifier="ItemView" id="jqO-dH-GsM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="38"/>
+            <point key="canvasLocation" x="3089" y="38"/>
         </scene>
-        <!--Item List Table View Controller - Title-->
+        <!--Title-->
         <scene sceneID="eF4-g7-8wn">
             <objects>
                 <tableViewController id="ggN-bA-Slh" customClass="ItemListTableViewController" sceneMemberID="viewController">
@@ -219,7 +219,34 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HF-pA-Ms2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586" y="38"/>
+            <point key="canvasLocation" x="4126" y="38"/>
+        </scene>
+        <!--Itemtable Table View Controller-->
+        <scene sceneID="id7-cJ-wWG">
+            <objects>
+                <tableViewController id="bdf-eW-F8B" customClass="ItemtableTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3Za-4h-Wb8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTable" id="Gpu-C3-785">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gpu-C3-785" id="D1s-Os-ASU">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bdf-eW-F8B" id="pyq-8e-s3N"/>
+                            <outlet property="delegate" destination="bdf-eW-F8B" id="GFg-5p-n5C"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lYm-tI-r3u"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rnh-GS-KOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3690" y="-281"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="TNI-aj-djC">
@@ -247,7 +274,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ib-ub-YGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4353" y="-260"/>
+            <point key="canvasLocation" x="6481" y="-260"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="B9e-bZ-Xhs">
@@ -275,7 +302,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clr-r6-Ve7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4353" y="453"/>
+            <point key="canvasLocation" x="5417" y="453"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

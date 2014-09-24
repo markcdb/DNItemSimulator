@@ -18,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /*Holds the ItemtableTableViewController so that it can pass property for the managedobjectcontext to have a reference*/
+    
+    MainMenuViewController *mmvc = (MainMenuViewController*)self.window.rootViewController;
+    mmvc.managedObjectContext = self.managedObjectContext;
+    
+
+    //parsing data
     NSString *path = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:@"uistring.xml"];
     NSData *data = [[NSData alloc]initWithContentsOfFile:path];
     
@@ -35,9 +42,7 @@
     else{
         NSLog(@"Error data not loaded");
     }
-    
-    
-    
+
     // Override point for customization after application launch.
     return YES;
 }
@@ -110,7 +115,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"EnhanceAppCD" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"DNItemtableEquipment" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -123,11 +128,20 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"itemtable_equipment.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ItemtableEquipment.sqlite"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:[storeURL path]]) {
+        NSURL *defaultStoreURL = [[NSBundle mainBundle] URLForResource:@"ItemtableEquipment"
+                                                         withExtension:@"sqlite"];
+        if (defaultStoreURL) {
+            [fileManager copyItemAtURL:defaultStoreURL toURL:storeURL error:NULL];
+        }
+    }
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES],NSInferMappingModelAutomaticallyOption, nil];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
         
         

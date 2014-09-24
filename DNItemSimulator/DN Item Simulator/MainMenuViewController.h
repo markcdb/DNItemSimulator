@@ -17,5 +17,7 @@
 - (IBAction)switchEquipView:(id)sender;
 @property (strong,nonatomic)NSString *itemLabelString;
 @property (retain, nonatomic) IBOutlet UILabel *ItemViewLabel;
+@property (strong,nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end

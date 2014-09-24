@@ -51,7 +51,13 @@
 
 -(void) itemListReceiver:(NSNotificationCenter *) notification{
     
-    [self performSegueWithIdentifier:@"toItemList" sender:self];
+    [self performSegueWithIdentifier:@"ItemView" sender:self];
+    
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier]isEqualToString:@"ItemView"]){
+    [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+    }
     
 }
 -(void) receiveNotification:(NSNotification *) notification{

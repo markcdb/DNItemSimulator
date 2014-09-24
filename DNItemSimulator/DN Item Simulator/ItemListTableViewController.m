@@ -69,7 +69,6 @@
     
     
     theList = [app.listArray objectAtIndex:indexPath.row];
-    NSString *test = [[NSString alloc]initWithFormat:@"%i",theList.mid];
     
     cell.textLabel.text = theList.message;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

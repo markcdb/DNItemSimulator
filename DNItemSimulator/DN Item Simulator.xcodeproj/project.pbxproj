@@ -61,6 +61,9 @@
 		8E138CDB1990ABA500519982 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E138CD51990ABA500519982 /* spark.png */; };
 		8E15123819B81F8200F61130 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E15123719B81F8200F61130 /* List.m */; };
 		8E15123B19B82D7C00F61130 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E15123A19B82D7C00F61130 /* Parser.m */; };
+		8E5CC40E19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CC40C19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodeld */; };
+		8E5CC41119D1DF00009B06F3 /* Itemtableequipment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CC41019D1DF00009B06F3 /* Itemtableequipment.m */; };
+		8E5CC41419D1ED4C009B06F3 /* ItemtableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CC41319D1ED4C009B06F3 /* ItemtableTableViewController.m */; };
 		8E72867419B69E8800745D5C /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E72867319B69E8800745D5C /* bg2.png */; };
 		8E72867719B69F8500745D5C /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E72867619B69F8500745D5C /* ItemListTableViewController.m */; };
 		8E72867A19B709B100745D5C /* uistring.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8E72867919B709B100745D5C /* uistring.xml */; };
@@ -161,7 +164,12 @@
 		8E15123719B81F8200F61130 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		8E15123919B82D7C00F61130 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		8E15123A19B82D7C00F61130 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
-		8E3B881B19CECE5600E6382D /* Itemtable_equipment.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = Itemtable_equipment.sqlite; path = "DN Item Simulator/Itemtable_equipment.sqlite"; sourceTree = "<group>"; };
+		8E5CC40B19D1DE63009B06F3 /* ItemtableEquipment.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItemtableEquipment.sqlite; sourceTree = "<group>"; };
+		8E5CC40D19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DNItemtableEquipment.xcdatamodel; sourceTree = "<group>"; };
+		8E5CC40F19D1DF00009B06F3 /* Itemtableequipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Itemtableequipment.h; sourceTree = "<group>"; };
+		8E5CC41019D1DF00009B06F3 /* Itemtableequipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Itemtableequipment.m; sourceTree = "<group>"; };
+		8E5CC41219D1ED4C009B06F3 /* ItemtableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemtableTableViewController.h; sourceTree = "<group>"; };
+		8E5CC41319D1ED4C009B06F3 /* ItemtableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemtableTableViewController.m; sourceTree = "<group>"; };
 		8E72867319B69E8800745D5C /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		8E72867519B69F8500745D5C /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
 		8E72867619B69F8500745D5C /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
@@ -374,6 +382,8 @@
 		8E72867819B69F8B00745D5C /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				8E5CC41219D1ED4C009B06F3 /* ItemtableTableViewController.h */,
+				8E5CC41319D1ED4C009B06F3 /* ItemtableTableViewController.m */,
 				8E72867519B69F8500745D5C /* ItemListTableViewController.h */,
 				8E72867619B69F8500745D5C /* ItemListTableViewController.m */,
 			);
@@ -386,7 +396,6 @@
 			children = (
 				8ECCD0BD19CE83C4003827F2 /* Coredata */,
 				8E72867919B709B100745D5C /* uistring.xml */,
-				8E3B881B19CECE5600E6382D /* Itemtable_equipment.sqlite */,
 				8E15123619B81F8200F61130 /* List.h */,
 				8E15123719B81F8200F61130 /* List.m */,
 				8E15123919B82D7C00F61130 /* Parser.h */,
@@ -415,6 +424,10 @@
 		8ECCD0BD19CE83C4003827F2 /* Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				8E5CC40B19D1DE63009B06F3 /* ItemtableEquipment.sqlite */,
+				8E5CC40C19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodeld */,
+				8E5CC40F19D1DF00009B06F3 /* Itemtableequipment.h */,
+				8E5CC41019D1DF00009B06F3 /* Itemtableequipment.m */,
 			);
 			name = Coredata;
 			path = "DN Item Simulator";
@@ -575,9 +588,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5CC41119D1DF00009B06F3 /* Itemtableequipment.m in Sources */,
+				8E5CC41419D1ED4C009B06F3 /* ItemtableTableViewController.m in Sources */,
 				8E15123819B81F8200F61130 /* List.m in Sources */,
 				8E138C301990907900519982 /* GeneralItemScene.m in Sources */,
 				8E138C2D1990907900519982 /* MainMenuViewController.m in Sources */,
+				8E5CC40E19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodeld in Sources */,
 				8E72867719B69F8500745D5C /* ItemListTableViewController.m in Sources */,
 				8E138C271990907900519982 /* AppDelegate.m in Sources */,
 				8E138C231990907900519982 /* main.m in Sources */,
@@ -815,6 +831,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8E5CC40C19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E5CC40D19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodel */,
+			);
+			currentVersion = 8E5CC40D19D1DE90009B06F3 /* DNItemtableEquipment.xcdatamodel */;
+			path = DNItemtableEquipment.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8E138C091990907900519982 /* Project object */;
 }
