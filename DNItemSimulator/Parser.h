@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
 #import "List.h"
+#import "Itemtableequipment.h"
 
 @interface Parser : NSObject<NSXMLParserDelegate>{
     AppDelegate *app;
@@ -16,6 +17,7 @@
     NSMutableString *currentElementValue;
     
 }
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 -(id)initParser;
 

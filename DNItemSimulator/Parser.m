@@ -27,11 +27,9 @@
         theList = [[List alloc]init];
         theList.message = [[attributeDict objectForKey:@"message"]stringValue];
         theList.mid = [[attributeDict objectForKey:@"mid"]integerValue];
-        
-        
-        
-        
     }
+    
+    
 }
 
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
@@ -42,6 +40,7 @@
     else{
         [currentElementValue appendString:string];
         theList.message = string;
+
     }
     
 }
@@ -49,8 +48,6 @@
 -(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
     if([elementName isEqualToString:@"messages"]){
         return;
-        
-        
     }
     if([elementName isEqualToString:@"message"]){
         [app.listArray addObject:theList];
@@ -59,7 +56,6 @@
     else{
         [theList setValue:currentElementValue forKey:elementName];
         currentElementValue = nil;
-        
     }
     
 }

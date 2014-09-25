@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Itemtableequipment.h"
-
 @interface ItemtableTableViewController : UITableViewController
 
 @property (nonatomic , strong) NSManagedObjectContext *managedObjectContext;

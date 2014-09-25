@@ -66,6 +66,7 @@
     
     _fethcedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
+   
 
     return _fethcedResultsController;
     

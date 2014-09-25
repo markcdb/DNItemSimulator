@@ -22,7 +22,7 @@
     
     MainMenuViewController *mmvc = (MainMenuViewController*)self.window.rootViewController;
     mmvc.managedObjectContext = self.managedObjectContext;
-    
+   
 
     //parsing data
     NSString *path = [[[NSBundle mainBundle]resourcePath]stringByAppendingPathComponent:@"uistring.xml"];
